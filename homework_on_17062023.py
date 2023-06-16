@@ -375,53 +375,67 @@
 
 # Решение:
 # Консольный регистратор
-
-from abc import ABC, abstractmethod
-
-class Logger(ABC):
-    @abstractmethod
-    def log_info(self):
-        pass
-
-    @abstractmethod
-    def log_warning(self):
-        pass
-
-    @abstractmethod
-    def log_error(self):
-        pass
-
-class ConsoleLogger(Logger):
-    def log_info(self):
-        print(f'Информация от консольного регистратора')
-
-    def log_warning(self):
-        print(f'Предупреждение от консольного регистратора')
-
-    def log_error(self):
-        print(f'Ошибка от консольного регистратора')
-
-# Файловый регистратор
-class FileLogger(Logger):
-    def log_info(self):
-        print(f'Информация от файлового регистратора')
-
-    def log_warning(self):
-        print(f'Предупреждение от файлового регистратора')
-
-    def log_error(self):
-        print(f'Ошибка от файлового регистратора')
-
-# Регистратор базы данных
-class DatabaseLogger(Logger):
-    def log_info(self):
-        print(f'Информация от регистратора базы данных')
-
-    def log_warning(self):
-        print(f'Предупреждение от регистратора базы данных')
-
-    def log_error(self):
-        print(f'Ошибка от регистратора базы данных')
-
-
+#
+# from abc import ABC, abstractmethod
+#
+# class Logger(ABC):
+#     @abstractmethod
+#     def log_info(self):
+#         pass
+#
+#     @abstractmethod
+#     def log_warning(self):
+#         pass
+#
+#     @abstractmethod
+#     def log_error(self):
+#         pass
+#
+# class ConsoleLogger(Logger):
+#     def log_info(self):
+#         print(f'Информация от консольного регистратора!')
+#
+#     def log_warning(self):
+#         print(f'Предупреждение от консольного регистратора!')
+#
+#     def log_error(self):
+#         print(f'Ошибка от консольного регистратора!')
+#
+# # Файловый регистратор
+# class FileLogger(Logger):
+#     def log_info(self):
+#         print(f'Информация от файлового регистратора!')
+#
+#     def log_warning(self):
+#         print(f'Предупреждение от файлового регистратора!')
+#
+#     def log_error(self):
+#         print(f'Ошибка от файлового регистратора!')
+#
+# # Регистратор базы данных
+# class DatabaseLogger(Logger):
+#     def log_info(self):
+#         print(f'Информация от регистратора базы данных!')
+#
+#     def log_warning(self):
+#         print(f'Предупреждение от регистратора базы данных!')
+#
+#     def log_error(self):
+#         print(f'Ошибка от регистратора базы данных!')
+#
+# console = ConsoleLogger()
+# file = FileLogger()
+# database = DatabaseLogger()
+# print()
+# console.log_info()
+# console.log_warning()
+# console.log_error()
+# print()
+# file.log_info()
+# file.log_warning()
+# file.log_error()
+# print()
+# database.log_info()
+# database.log_warning()
+# database.log_error()
 
